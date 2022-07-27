@@ -5,8 +5,8 @@
     
 }
 :root{
-    --secondary:#374151;
-    --primary:#1F2937;
+    --secondary:#373b69;
+    --primary:#22254b;
     --gray:#6B7280;
     --light:#eee;
     --pink:#ec4899;
@@ -15,7 +15,7 @@
     --blue:#7EE8FA;
 }
 body{
-    background-color: var(--secondary);
+    background-color: var(--primary);
     color: var(--light);
     font-family: 'Inter', sans-serif;
     min-height: 100vh;
@@ -47,7 +47,7 @@ header h1{
     font-size: 1.5em;
     padding:0.5em;
     border-radius:0.2rem;
-    background-color: #1F2937;
+    background-color: var(--secondary);
     color:var(--light);
 }
 .input-main::placeholder
