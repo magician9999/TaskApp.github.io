@@ -5,8 +5,8 @@
     
 }
 :root{
-    --secondary:#373b69;
-    --primary:#22254b;
+    --secondary:#1f2937;
+    --primary:#374151;
     --gray:#6B7280;
     --light:#eee;
     --pink:#ec4899;
@@ -27,11 +27,19 @@ header{
     flex-direction: column;
     margin-top: 2em;
 }
+.title
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.2em;
+}
 header h1{
     font-family: 'Ruluko', sans-serif;
     color: var(--gray);
     font-size: 3.5rem;
 }
+
 #form
 {
     display: flex;
@@ -67,13 +75,17 @@ header h1{
 {   margin:1em;
     flex:1 1 0%;
     font-family: 'Inter', sans-serif;
-    font-size: 1.12em;
+    font-size: 1.45em;
     padding:0.5em;
     background-color: var(--purple);
     color:var(--light);
     cursor: pointer;
+    border-radius: 12px;
     transition: 0.4s;
+    font-weight: 700;
+
 }
+
 main{
     display:flex;
     text-align: center;
@@ -90,6 +102,7 @@ main{
     color: var(--gray);
     font-size: 1.5 rem;
     margin-bottom: 1em;
+    
 }
 .task-list
 {
@@ -135,6 +148,11 @@ main{
 {
     margin:1em;
     padding:1em;
+    transition: box-shadow .3s;
+}
+.task-column:hover{
+    box-shadow: 0 0 11px rgba(245,255,255,.6); 
+
 }
 .task-row{
     display:flex;
@@ -157,16 +175,16 @@ main{
 }
 .change .edit
 {
-    background-image: linear-gradient(to right, var(--green), var(--blue));
+    background-image: linear-gradient(to right,#7EE8FA,#EEC0C6);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
     padding:0.2em;
 }
+
 .change .delete
 {
-    background-image: linear-gradient(to right, var(--pink), var(--purple));
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+   
+    color: crimson;
 }
 .change button:hover
 {
@@ -175,4 +193,86 @@ main{
 .change button:active
 {
     opacity:0.6;
+}
+.checkbox svg{
+    fill:var(--blue);
+}
+.checkboxchange svg
+{
+    fill:#84fa84;
+}
+@media(min-width:1600px)
+ {
+    .task-list h2
+    {
+        margin-right: 0em;
+        margin-left:0em;
+    }
+ }
+@media(max-width:1280px)
+{
+    header{
+        width:100%;
+    }
+}
+@media(max-width:768px)
+{   
+    header{
+        width:95%;
+        padding:20px;
+        gap:10px;
+        align-items: center;
+        flex-direction: column;
+    }
+    .title svg
+    {
+        visibility: hidden;
+    }
+    .task-list{
+        width:100%;
+        display:flex;
+        flex-direction: column;
+    }
+    .task-list h2{
+        margin:auto;
+        margin-bottom: 1em;
+    }
+    .task-column{
+        width:100%;
+        display:flex;
+        flex-direction: column;
+    }
+    
+    .change{
+        width:100%;
+        display:flex;
+        flex-direction: column;
+        margin-top: 0.5em;
+    }
+    .
+    .task-section .task-column .change 
+    {
+        visibility:hidden;
+    }
+    .task-section .task-column .change{
+        display:flex;
+        justify-content: space-between;
+    }
+    task-section .task-column .change .chckbox
+    {
+        visibility:visible;
+        justify-content: flex-end;
+    }
+    .text
+    {
+        flex:1 1 0;
+    }
+    
+}
+
+@media(max-width:480px){
+    #input input{width:74%;}
+}
+@media(max-width:320px){
+    #input input{width:60%;}
 }
